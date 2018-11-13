@@ -1,0 +1,261 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", Arial;
+    background-color: #E8E8E8;
+}
+#wrap2,#wrap3,#wrap4,#wrap5,#wrap6,#wrap7{
+    display: none;
+}
+.wrap {
+    height: 100%;
+    width: 100%;
+    background-color: #E8E8E8;
+}
+.logo-ban {
+    width: 100%;
+    height: 38%;
+    background: url(../images/banner.jpg) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.product{
+    text-align: center;
+    font-size: 18px;
+    margin: 30px 0;
+}
+.product p {
+    margin: 0;
+}
+.product p:first-child {
+    font-size: 22px;
+    font-weight: bold;
+}
+.product p:nth-child(2) {
+    font-size: 16px;
+    color: #9E9E9E;
+}
+.product-de {
+    margin: 0 20px;
+    background-color: #fff;
+    padding: 40px 20px;
+}
+.wrap2 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.part1,.part2,.part3,.part4{
+    width: 42%;
+}
+.part1{
+    padding: 3%;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+.part2 {
+    padding: 3%;
+    display: inline-block;
+    text-align: center;
+}
+.part4 {
+    padding: 3%;
+    display: inline-block;
+    text-align: center;
+}
+.part3{
+    padding: 3%;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+.wrap3{
+    text-align: center;
+}
+.wrap2 img ,.wrap3 img {
+    width: 40%;
+}
+.logo-ban2 {
+    margin: 20px 20px 40px 20px;
+    width: 90%;
+    height: 30%;
+    background: url(../images/banner2.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.content1{
+    margin: 0 20px 20px 20px;
+    color: #6D6969;
+}
+.content2{
+     padding: 0 20px 70px 20px;
+     color: #6D6969;
+ }
+.foot{
+    display: flex;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    bottom: 0;
+    background-color: #f3f3f3;
+}
+.company,.case,.call{
+    flex: 1;
+    text-align: center;
+}
+.company img,.case img,.call img{
+    height: 35px;
+}
+.company p,.case p,.call p{
+    margin: 0;
+    font-size: 14px;
+}
+.blue{
+    color: #1296db;
+}
+.casePic{
+    padding: 0 40px 40px 40px;
+}
+.casePic img,.casePic4 img{
+    height: 100%;
+    width: 100%;
+}
+.casePic4{
+    padding: 0 40px 40px 40px;
+}
+.callBtn{
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+.callBtn button{
+    height: 50px;
+    width: 87%;
+    background-color: #0080E8;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.callBtn2{
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+.callBtn2 button{
+    height: 50px;
+    width: 87%;
+    background-color: #0080E8;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.callBtn3{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+.callBtn3 button{
+    height: 50px;
+    width: 87%;
+    background-color: #0080E8;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+.wrap4{
+    background-color: #fff;
+}
+.product2{
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    padding: 30px 0;
+}
+.product2 p {
+    margin: 0;
+}
+.product2 p:first-child {
+    font-size: 22px;
+    font-weight: bold;
+}
+.product2 p:nth-child(2) {
+    font-size: 16px;
+    color: #9E9E9E;
+}
+.content3{
+    margin-left:30px;
+}
+.callTittle p{
+    margin: 0;
+    padding: 20px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+.icon{
+    height: 40px;
+}
+.callWx,.callNum{
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.callMail{
+    display: flex;
+    padding: 10px;
+}
+.content4{
+    margin: 0;
+    width: 80%;
+    height: 40px;
+    flex: 1;
+    padding: 10px 0 0 20px;
+    vertical-align: middle;
+}
+.product3 {
+    text-align: center;
+    font-size: 18px;
+    color: #9E9E9E;
+}
+.product3 p{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+}
+.content5 p:first-child{
+    color: #0080E8;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0;
+}
+.content5 p:nth-child(2),.content5 p:nth-child(3),.content5 p:nth-child(4){
+    color: #6D6D6D;
+    font-size: 14px;
+    margin: 0;
+   padding-bottom: 20px;
+}
+.content5{
+    margin: 0 20px;
+}
+.wrap5{
+    height: 100%;
+    width: 100%;
+}
+.logo-ban3{
+    margin: 0 20px 20px 20px;
+    width: 90%;
+    height: 30%;
+    background: url(../images/banner2.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.logo-ban4{
+    margin: 0 20px 20px 20px;
+    width: 90%;
+    height: 220px;
+    background: url(../images/banner2.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}

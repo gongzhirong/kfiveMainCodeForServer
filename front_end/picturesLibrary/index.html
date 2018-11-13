@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TestOfPicture</title>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="Font-Awesome-4.7/css/font-awesome.min.css">                
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/hero-slider-style.css">                              
+    <!-- Hero slider style (https://codyhouse.co/gem/hero-slider/) -->
+    <link rel="stylesheet" href="css/magnific-popup.css">                                 
+    <!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
+    <link rel="stylesheet" href="css/templatemo-style.css">                                   
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+
+        <!-- These two JS are loaded at the top for gray scale including the loader. -->
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+    
+        <!-- jQuery (https://jquery.com/download/) -->
+        
+        <script src="js/public.js"></script>
+        <script>
+        
+            var tm_gray_site = false;
+            
+            if(tm_gray_site) {
+                $('html').addClass('gray');
+            }
+            else {
+                $('html').removeClass('gray');   
+            }
+        </script>
+</head>
+
+    <body>
+        
+        <!-- Content -->
+        <div class="cd-hero">
+
+            <!-- Navigation -->        
+            <div class="cd-slider-nav">
+                <nav class="navbar">
+                    <div class="tm-navbar-bg">
+                        
+                        <a class="navbar-brand text-uppercase" href="#"><i class="fa fa-picture-o tm-brand-icon"></i>PictureLibrary</a>
+                        <!-- <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+                        <div class="collapse navbar-toggleable-md text-xs-center text-uppercase tm-navbar" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item active selected">
+                                    <a class="nav-link" href="#0" data-no="1">1st fluid <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                        </div>   -->                      
+                    </div>
+
+                </nav>
+            </div> 
+
+            <ul class="cd-hero-slider">
+
+                <!-- Page 1 Gallery One -->
+                <li class="selected" style="min-height: 900px;">                    
+                    <div class="cd-full-width">
+                        <div class="container-fluid js-tm-page-content" data-page-no="1" data-page-type="gallery">
+                            <div class="tm-img-gallery-container">
+                                <div class="tm-img-gallery gallery-one">
+                                <!-- Gallery One pop up connected with JS code below -->
+                                    <!-- <div class="grid-item">
+                                        <figure class="effect-sadie">
+                                            <img src="img/tm-img-01.jpg" alt="Image" class="img-fluid tm-img">
+                                            <figcaption>
+                                                <h2 class="tm-figure-title">Image <span><strong>One</strong></span></h2>
+                                                <p class="tm-figure-description">Set true or false in HTML script tag for this page black and white.</p>
+                                                <a href="img/tm-img-01.jpg">View more</a>
+                                            </figcaption>           
+                                        </figure>
+                                    </div> -->                                                                      
+                                </div>                                 
+                            </div>
+                        </div>                                                    
+                    </div>                    
+                </li>
+
+                <!-- Page 2 Gallery Two -->
+                <li>                    
+                    <div class="cd-full-width">
+                        <div class="container-fluid js-tm-page-content" data-page-no="2" data-page-type="gallery">
+                            <div class="tm-img-gallery-container">
+                                <div class="tm-img-gallery gallery-two">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好啊!
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                </li>
+
+                <!-- Page 3 Gallery Three -->
+                <li>
+                    <div class="cd-full-width">
+                        <div class="container-fluid js-tm-page-content" data-page-no="3" data-page-type="gallery">                        
+                            <div class="tm-img-gallery-container">
+                                <div class="tm-img-gallery gallery-three">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好啊!
+                                </div>                                 
+                            </div>
+                        </div>         
+                    </div>  
+                </li>
+            </ul>
+                    
+        </div> <!-- .cd-hero -->
+        
+
+        <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
+        <div id="loader-wrapper">
+            
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+        </div>
+        
+        <!-- load JS files -->
+        
+        <script src="js/tether.min.js"></script> <!-- Tether (http://tether.io/)  --> 
+        <script src="js/bootstrap.min.js"></script>             <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
+        <script src="js/hero-slider-main.js"></script>          <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+        <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="js/jquery.lazyload.js"></script> <!-- lazyLoad (https://github.com/helijun/documents/tree/master/plugin/lazyLoad) -->
+
+        <script>
+
+            function adjustHeightOfPage(pageNo) {
+                var pageContentHeight = 0;
+                var pageType = $('div[data-page-no="' + pageNo + '"]').data("page-type");
+
+                if( pageType != undefined && pageType == "gallery") {
+                    pageContentHeight = $(".cd-hero-slider li:nth-of-type(" + pageNo + ") .tm-img-gallery-container").height();
+                }
+                else {
+                    pageContentHeight = $(".cd-hero-slider li:nth-of-type(" + pageNo + ") .js-tm-page-content").height() + 20;
+                }
+
+                // Get the page height
+                var totalPageHeight = $('.cd-slider-nav').height()
+                                        + pageContentHeight
+                                        + $('.tm-footer').outerHeight();
+
+                // Adjust layout based on page height and window height
+                if(totalPageHeight > $(window).height())
+                {
+                    $('.cd-hero-slider').addClass('small-screen');
+                    $('.cd-hero-slider li:nth-of-type(' + pageNo + ')').css("min-height", totalPageHeight + "px");
+                }
+                else
+                {
+                    $('.cd-hero-slider').removeClass('small-screen');
+                    $('.cd-hero-slider li:nth-of-type(' + pageNo + ')').css("min-height", "100%");
+                }
+            }
+            // 图片处理
+            (function($){
+                $.fn.potcanversPictureCttl = function (callback) {
+                    this.map(function (item) {
+                        var can = document.createElement('canvas')
+                        can.width = 400;
+                        can.height = 400;
+                        var ctx=can.getContext("2d");
+                        if (this.naturalWidth < this.naturalHeight) {
+                            var sy = this.naturalHeight/2 - this.naturalWidth/2;
+                            ctx.drawImage(this,0,sy,this.naturalWidth,this.naturalWidth,0,0,400,400);
+                            this.src = can.toDataURL();
+                        } else if (this.naturalWidth > this.naturalHeight) {
+                            var sx = this.naturalWidth/2 - this.naturalHeight/2;
+                            ctx.drawImage(this,sx,0,this.naturalHeight,this.naturalHeight,0,0,400,400);
+                            this.src = can.toDataURL();
+                        }
+                    })
+                    callback()
+                }
+            })(jQuery)
+
+            // 获取图片数据
+            $.ajax({
+                type: 'get',
+                // url: './pictureData.json',
+                url: apiHost + 'api/queryPicturesLibrary',
+                dataType: 'json',
+                async: false,
+                contentType: 'application/json',
+                success: function (res) {
+                    if (res.code !== '200') return
+                    var pictListHtml_ = res.data.map(function (item) {
+                        return ('<div class="grid-item">'
+                                +    '<figure class="effect-sadie">'
+                                // +        '<img src="'+ item.url +'" alt="Image" class="img-fluid tm-img">'
+                                +        '<img src="pictureLoading.gif" data-src="'+ item.url +'" alt="Image" class="img-fluid tm-img">'
+                                +        '<figcaption>'
+                                // +            '<h2 class="tm-figure-title">Image <span><strong>One</strong></span></h2>'
+                                // +            '<p class="tm-figure-description">Set true or false in HTML script tag for this page +black and white.</p>'
+                                +            '<a href="'+ item.url +'">View more</a>'
+                                +        '</figcaption> '
+                                +    '</figure>'
+                                +'</div>')
+                    })
+                    $('.gallery-one').append(pictListHtml_)
+                }
+            })
+
+            $('body').addClass('loaded');
+            /*
+                Everything is loaded including images.
+            */
+            $(window).load(function(){
+                $('img').potcanversPictureCttl(function () {
+                    adjustHeightOfPage(1)
+                })
+                // adjustHeightOfPage(1); // Adjust page height
+                
+                /* Gallery One pop up
+                -----------------------------------------*/
+                $('.gallery-one').magnificPopup({
+                    delegate: 'a', // child items selector, by clicking on it popup will open
+                    type: 'image',
+                    gallery:{enabled:true}                
+                });
+                
+                /* Gallery Two pop up
+                -----------------------------------------*/
+                $('.gallery-two').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery:{enabled:true}                
+                });
+
+                /* Gallery Three pop up
+                -----------------------------------------*/
+                $('.gallery-three').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery:{enabled:true}                
+                });
+
+                /* Collapse menu after click 
+                -----------------------------------------*/
+                $('#tmNavbar a').click(function(){
+                    $('#tmNavbar').collapse('hide');
+
+                    adjustHeightOfPage($(this).data("no")); // Adjust page height       
+                });
+
+                /* Browser resized 
+                -----------------------------------------*/
+                $( window ).resize(function() {
+                    var currentPageNo = $(".cd-hero-slider li.selected .js-tm-page-content").data("page-no");
+                    
+                    // wait 3 seconds
+                    setTimeout(function() {
+                        adjustHeightOfPage( currentPageNo );
+                    }, 1000);
+                    
+                });
+
+                // Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
+
+                function potcanversPictureCttl2 (url, index) {
+                    var can = document.createElement('canvas')
+                    var dataUrl;
+                    var imgUrl=new Image();
+                    imgUrl.src=url;
+                    can.width = 400;
+                    can.height = 400;
+                    imgUrl.onload = function () {
+                        var ctx=can.getContext("2d");
+                        if (imgUrl.naturalWidth < imgUrl.naturalHeight) {
+                            var sy = imgUrl.naturalHeight/2 - imgUrl.naturalWidth/2;
+                            ctx.drawImage(imgUrl,0,sy,imgUrl.naturalWidth,imgUrl.naturalWidth,0,0,400,400);
+                            dataUrl = can.toDataURL();
+                        } else if (imgUrl.naturalWidth > imgUrl.naturalHeight) {
+                            var sx = imgUrl.naturalWidth/2 - imgUrl.naturalHeight/2;
+                            ctx.drawImage(imgUrl,sx,0,imgUrl.naturalHeight,imgUrl.naturalHeight,0,0,400,400);
+                            dataUrl = can.toDataURL();
+                        } else {
+                            dataUrl = url
+                        }
+
+                        img.eq(index).attr("src", dataUrl);
+                    }
+                }
+
+
+                var n = 0;
+                var imgNum =  $('img').length;
+                var img =  $('img');
+                lazyload();
+                $(window).scroll(lazyload);
+                function lazyload(event) {
+                    for (var i = n; i < imgNum; i++) {
+                        if (img.eq(i).offset().top < (parseInt($(window).height()) + parseInt($(window).scrollTop()))) {
+                            var src = img.eq(i).attr("data-src");
+                            potcanversPictureCttl2(src, i)
+                            n = i + 1;
+                        }
+                    }
+                }
+                // 简单的节流函数
+                //fun 要执行的函数
+                //delay 延迟
+                //time  在time时间内必须执行一次
+                function throttle(fun, delay, time) {
+                    var timeout,
+                            startTime = new Date();
+                    return function() {
+                        var context = this,
+                                args = arguments,
+                                curTime = new Date();
+                        clearTimeout(timeout);
+                        // 如果达到了规定的触发时间间隔，触发 handler
+                        if (curTime - startTime >= time) {
+                            fun.apply(context, args);
+                            startTime = curTime;
+                            // 没达到触发间隔，重新设定定时器
+                        } else {
+                            timeout = setTimeout(fun, delay);
+                        }
+                    };
+                };
+                // 实际想绑定在 scroll 事件上的 handler
+                // function lazyload(event) {}
+                // 采用了节流函数
+                window.addEventListener('scroll',throttle(lazyload,0,0));
+            });
+            
+        </script>            
+
+</body>
+</html>
