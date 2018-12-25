@@ -7,8 +7,7 @@ var ObjectId = require('mongodb').ObjectId;
 
 // 提供接口服务
 function apiServer (app) {
-
- 
+  console.log('初始化apiServer...')
  // 添加 body-parser 中间件（post请求中body中的参数使用bodyParser中间件可读取）
  app.use(bodyParser.urlencoded({extended: false}));
  app.use(bodyParser.json());
@@ -36,32 +35,9 @@ function apiServer (app) {
   })
  });
 
- // 把./front_end/picturesLibrary/img目录下的文件录入到picturesLibrary表中
- // app.get('/api/insertPict', (req, res) => {
- //  fs.readdir('./front_end/picturesLibrary/img', (err, files) => {
- //   var data = []
- //   var host = req.hostname
- //   for (var i = 0; i < files.length; i++) {
- //    data.unshift({
- //     good: 0,
- //     url: 'http://' + host + '/picturesLibrary/img/' + files[i]
- //    })
- //    // 最新数据放到最前面
- //   }
- //   DB_CLIENT((db, callback) => {
- //    // console.log('准备查询数据');
- //    var collection = db.collection('picturesLibrary');
- //    collection.insert(data, (err, result) => {
- //     if (err) console.log(err);
- //     res.json(result)
- //     callback();
- //    })
- //   })
- //  })
- // })
-
  // 删除多个特定图片
  app.post('/api/deletePict', (req, res) => {
+  console.log('/api/deletePict', '接口：请求删除多个特定图片接口')
   var result = {code: '200', data: null, msg: '删除成功'};
   if (!req.body.ids.length) {
     return res.json({code: '400', data: req.body.ids, msg: '没传参数'})
@@ -83,6 +59,7 @@ function apiServer (app) {
 
  // 接口：获取users表用户信息
  app.get('/api/queryUsers', (req, res) => {
+  console.log('/api/queryUsers', '接口：获取users表用户信息')
   var result = {code: '200', data: null, msg: null};
   DB_CLIENT((db, callback) => {
    // console.log('准备查询数据');
@@ -104,6 +81,7 @@ function apiServer (app) {
 
  // 接口：获取picturesLibrary表中的图片信息数据
  app.post('/api/queryPicturesLibrary', (req, res) => {
+  console.log('/api/queryPicturesLibrary', '接口：获取picturesLibrary表中的图片信息数据')
   var result = {code: '200', data: {}, msg: null};
   console.log('调用接口/api/queryPicturesLibrary')
   DB_CLIENT((db, callback) => {
@@ -115,38 +93,6 @@ function apiServer (app) {
    })
 
    collection.find({}, {limit: req.body.pageSize || 9999, skip: req.body.pageSize * (req.body.pageNo - 1)} || 0).sort({createTime:-1}).toArray((err, data) => {
-    // if (data.length === 0) {
-    // 	// 数据为空时，执行一次图片录入表操作
-    //  fs.readdir('./front_end/picturesLibrary/img', (err, files) => {
-    //   var data = []
-    //   var host = req.hostname
-    //   for (var i = 0; i < files.length; i++) {
-    //    data.push({
-    //     good: 0,
-    //     createTime: new Date().getTime() + i,
-    //     url: 'http://' + host + '/picturesLibrary/img/' + files[i]
-    //    })
-    //    // 最新数据放到最前面
-    //   }
-
-    //   DB_CLIENT((db, callback) => {
-    //    // console.log('准备查询数据');
-    //    var collection = db.collection('picturesLibrary');
-    //    collection.insert(data, (err, resdata) => {
-    //     if (err) console.log(err);
-    //     var dataReverse = [];
-		  //    	for (var i = 0; i < resdata.ops.length; i++) {
-		  //    		dataReverse.unshift(resdata.ops[i]);
-		  //    	}
-    //     result.data.data = data;
-    //     result.msg = 'success';
-    //     res.json(result);
-    //     callback();
-    //    })
-    //   })
-    //  })
-    //  // 数据为空时，执行一次图片录入表操作
-    // } else {
      if (err) {
       result.code = '666';
       result.msg = err;

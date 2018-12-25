@@ -196,7 +196,7 @@
 
             // 获取图片数据
             $.ajax({
-                type: 'get',
+                type: 'post',
                 // url: './pictureData.json',
                 url: apiHost + 'api/queryPicturesLibrary',
                 dataType: 'json',
@@ -204,7 +204,7 @@
                 contentType: 'application/json',
                 success: function (res) {
                     if (res.code !== '200') return
-                    var pictListHtml_ = res.data.map(function (item) {
+                    var pictListHtml_ = res.data.data.map(function (item) {
                         return ('<div class="grid-item">'
                                 +    '<figure class="effect-sadie">'
                                 // +        '<img src="'+ item.url +'" alt="Image" class="img-fluid tm-img">'

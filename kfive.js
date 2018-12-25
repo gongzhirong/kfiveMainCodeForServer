@@ -21,6 +21,7 @@ app.get('/', (req, res) => { // 如不输入路径只输入域名，则跳入默
 var server = app.listen(80, function () {
   var host = server.address().address
   var port = server.address().port
-  console.log("web开启，访问端口为80")
+  console.log(host, "address")
+  console.log(port, "port")
 })
 /* 开启服务 */
